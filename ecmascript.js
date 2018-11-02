@@ -21,3 +21,9 @@ let energy = document.getElementById("energy");
 
 const newAnimal = new Animal(name, enegry)
  
+function nextToEat (animals) {
+  const sortedByLeastEnergy = animals.sort((a,b) => {
+    return a.energy - b.energy
+  })
+  return sortedByLeastEnergy[0].name
+}
